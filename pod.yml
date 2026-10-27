@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: payment-app-pod
+  labels:
+    app: payment-app
+spec:
+  containers:
+    - name: payment-app
+    image: openjdk:17-jdk-slim
+    ports:
+        - containerPort: 8080
+    command: ["java", "-jar", "app.jar"]
